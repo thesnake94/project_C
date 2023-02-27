@@ -5,7 +5,7 @@ void gd_putchar(char c) {
 }
 
 int gd_putstr(char *str){
-    printf();
+   
 }
 
 int main(void) {
