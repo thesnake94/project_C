@@ -15,7 +15,7 @@ int gd_atoi(char *str){
             break;
         i++;
     }
-    if (str[i] == 43 || str[i] == 45){ //dans la tbables ascii pour le plus et le moins
+    if (str[i] == 43 || str[i] == 45){ //dans la tables ascii pour le plus et le moins
         if (str[i] == 45)
             neg = -1;
         i++;
