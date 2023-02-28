@@ -15,6 +15,7 @@ int gd_putstr(char *str){
 
 int main(void) {
     int nb_put = gd_putstr("Coucou");
+    
     printf("%i\n", nb_put);
     return(1);
 }
