@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-// void gd_putnbr(int nb){
-// }
-// void gd_putchar(char c){
-//     write(1 , &c, 1);
-// }
-
 void gd_putnbr (int nb);
 void gd_putchar (char c);
 
