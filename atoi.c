@@ -1,12 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
+void gd_putnbr(int nb){
+
+}
+
+void gd_putchar(char c){
+    write(1 , &c, 1);
+}
 
 int gd_atoi(char *str){
-    char caracteres[4] = "7542";
+
 }
 
 int main(void){
-    int nb = gd_atoi("123456");
-
+    int nb = gd_atoi("-500");
+    gd_putnbr(nb);
+    gd_putchar('\n');
     
 }
