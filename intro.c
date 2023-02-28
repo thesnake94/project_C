@@ -1,6 +1,3 @@
-
-
-
 int loop(int max_int) {
     int i;
 
