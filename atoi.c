@@ -17,7 +17,7 @@ int gd_atoi(char *str){
     int nb;
 
     while(str[i]){
-        if ((str[i] >= 48 && str[i] <=59) || (str[i] == 43 || str[i] == 45)) // entre 48 et 59 dans la table ascii pour les chiffres
+        if ((str[i] >= 48 && str[i] <=57) || (str[i] == 43 || str[i] == 45)) // entre 48 et 59 dans la table ascii pour les chiffres
             break;
         i++;
     }
