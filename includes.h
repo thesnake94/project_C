@@ -15,9 +15,9 @@ int gd_atoi(char *str);
 #define FAUX 0
 typedef int BOOLEAN;
 
-typedef struct my_struct{
-    int minutes;
-    int hours;
-} type_struc;
+typedef struct my_lst{
+    int nbr;
+    struct my_lst *next;
+} type_lst;
 
 #endif
