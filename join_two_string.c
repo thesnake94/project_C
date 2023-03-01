@@ -1,11 +1,9 @@
-// reunir 2 chaines de caracteres
-
-
 #include <stdlib.h>
 #include <stdio.h>
 
 
 char *join_two_string(char const *str1, char const *str2){
+
     char *ret;
     int len_str1 = 0;
     int len_str2 = 0;
@@ -19,22 +17,12 @@ char *join_two_string(char const *str1, char const *str2){
     if (ret == NULL)
         return NULL;
 
-    
-    char *p = ret;
 
-    while(*str1)
-        *p++ = *str1++;
-
-    while(*str2)
-        *p++ = *str2++;
-
-    *p = '\0';  
 
     return(ret);
-
 }
 
-int main(void) {
+int main(void){
     char *str1 = "test";
     char *str2 = "zoa";
     char *dup;
