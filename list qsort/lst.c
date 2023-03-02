@@ -1,6 +1,14 @@
 
 // trier ce tableau avec qsort + créer des listes chainées
 
+/*  
+    1) trier array_int avec qsort
+    2) creation de 5 "type_lst *" contenant un chiffre chacune
+    3) chainer ses listes grace au "next". La premiere liste doit etre la valueur la plus petite, le derniere la plus grande
+    4) bonus : si doublement chainer (avec un prev)
+    5) bonus ; si bouclé
+*/
+
 #include "includes.h"
 
 int compare_ints(const void *a, const void *b) {
