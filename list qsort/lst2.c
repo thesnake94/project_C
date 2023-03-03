@@ -8,18 +8,31 @@
     4) bonus : si doublement chainer (avec un prev)
     5) bonus ; si bouclé
 */
+#ifndef INCLUDES_H
+# define INCLUDES_H
 
-#include "includes.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-typedef struct s_lst {
+
+typedef struct my_lst{
     int nbr;
-    struct s_lst *next;
-    struct s_lst *prev;
-} t_lst;
+    struct my_lst *next;
+    struct my_lst *prev;
 
-int cmpfunc (const void * a, const void * b) {
-   return ( *(int*)a - *(int*)b );
-}
+} type_lst;
+
+
+
+
+
+
+int comparator (const void * first, const void * second) {
+   int firstInt = * (const int *) first;
+    int secondInt = * (const int *) second;
+    return firstInt - secondInt;
+    }
 
 int main(void){
 
@@ -27,7 +40,7 @@ int main(void){
     int i = 0;
 
     // trier le tableau avec qsort
-    qsort(array_int, 5, sizeof(int), cmpfunc);
+    qsort(array_int, 5, sizeof(int), comparator);
 
     while (i < 5){
         printf("%i\n", array_int[i]);
@@ -35,27 +48,27 @@ int main(void){
     }
 
     // creation de 5 listes contenant un chiffre chacune
-    t_lst *lst1 = (t_lst *)malloc(sizeof(t_lst));
+    type_lst *lst1 = (type_lst *)malloc(sizeof(type_lst));
     lst1->nbr = array_int[0];
     lst1->next = NULL;
     lst1->prev = NULL;
 
-    t_lst *lst2 = (t_lst *)malloc(sizeof(t_lst));
+    type_lst *lst2 = (type_lst *)malloc(sizeof(type_lst));
     lst2->nbr = array_int[1];
     lst2->next = NULL;
     lst2->prev = NULL;
 
-    t_lst *lst3 = (t_lst *)malloc(sizeof(t_lst));
+    type_lst *lst3 = (type_lst *)malloc(sizeof(type_lst));
     lst3->nbr = array_int[2];
     lst3->next = NULL;
     lst3->prev = NULL;
 
-    t_lst *lst4 = (t_lst *)malloc(sizeof(t_lst));
+    type_lst *lst4 = (type_lst *)malloc(sizeof(type_lst));
     lst4->nbr = array_int[3];
     lst4->next = NULL;
     lst4->prev = NULL;
 
-    t_lst *lst5 = (t_lst *)malloc(sizeof(t_lst));
+    type_lst *lst5 = (type_lst *)malloc(sizeof(type_lst));
     lst5->nbr = array_int[4];
     lst5->next = NULL;
     lst5->prev = NULL;
@@ -75,7 +88,7 @@ int main(void){
     lst5->next = lst1;
 
     // affichage de la liste
-    t_lst *lst = lst1;
+    type_lst *lst = lst1;
     while(lst){
         printf("le nbr = %i\n", lst->nbr);
         lst = lst->next;
@@ -92,3 +105,10 @@ int main(void){
 
     return 0;
 }
+
+
+
+
+
+
+#endif
