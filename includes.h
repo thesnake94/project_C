@@ -20,4 +20,10 @@ typedef struct my_lst{
     struct my_lst *next;
 } type_lst;
 
+int comparator (const void * first, const void * second) {
+   int firstInt = * (const int *) first;
+    int secondInt = * (const int *) second;
+    return firstInt - secondInt;
+    }
+
 #endif

@@ -1,11 +1,7 @@
 #include "includes.h"
 
 
-int comparator (const void * first, const void * second) {
-   int firstInt = * (const int *) first;
-    int secondInt = * (const int *) second;
-    return firstInt - secondInt;
-    }
+
 
 int main () {
    int array_int[5] = {5,6,8,9,1};
@@ -62,13 +58,6 @@ int main () {
         if (lst == lst1) 
             break;
     }
-
-    // liberer memoire
-    free(lst1);
-    free(lst2);
-    free(lst3);
-    free(lst4);
-    free(lst5);
 
     return 0;
 }
