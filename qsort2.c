@@ -23,23 +23,23 @@ int main () {
     // listes
     type_lst *lst1 = (type_lst *)malloc(sizeof(type_lst));
     lst1->nbr = array_int[0];
-    lst1->next = NULL;
+    // lst1->next = NULL;
 
     type_lst *lst2 = (type_lst *)malloc(sizeof(type_lst));
     lst2->nbr = array_int[1];
-    lst2->next = NULL;
+    // lst2->next = NULL;
 
     type_lst *lst3 = (type_lst *)malloc(sizeof(type_lst));
     lst3->nbr = array_int[2];
-    lst3->next = NULL;
+    // lst3->next = NULL;
 
     type_lst *lst4 = (type_lst *)malloc(sizeof(type_lst));
     lst4->nbr = array_int[3];
-    lst4->next = NULL;
+    // lst4->next = NULL;
 
     type_lst *lst5 = (type_lst *)malloc(sizeof(type_lst));
     lst5->nbr = array_int[4];
-    lst5->next = NULL;
+    // lst5->next = NULL;
 
 
     // chaine liste
