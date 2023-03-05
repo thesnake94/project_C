@@ -2,7 +2,6 @@
 
 
 
-
 int main () {
    int array_int[5] = {5,6,8,9,1};
    int i = 0;
@@ -18,8 +17,7 @@ int main () {
     qsort(array_int, 5, sizeof(int), comparator);
 
 
-    printf("\n trié : \n");
-
+    printf("\n Après le tri : \n");
 
 
     // listes
