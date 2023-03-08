@@ -7,7 +7,7 @@ int main(void){
     int j = 0;
 
     //allouer la mémoire du int ** -> 9lignes (9 int *)
-    board = (int**)malloc(9* sizeof(int*));
+    board = (int **)malloc(9* sizeof(int*));
 
     //loop *9 allouer la mémoire des int* -> (9 int)
     while (i < 9) {
