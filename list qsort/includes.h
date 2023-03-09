@@ -2,13 +2,14 @@
 # define INCLUDES_H
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include  <sys/types.h>
+#include  <sys/stat.h>
+#include  <fcntl.h>
+#include  <stdlib.h>
 
-// void gd_putnbr(int nb);
-// void gd_putchar(char c);
 void gd_putstr(char *str);
-// int gd_strlen(char *str):
 int gd_atoi(char *str);
 
 #define VRAI 1
@@ -22,10 +23,9 @@ typedef struct my_lst{
 } type_lst;
 
 
+
 int comparator (const void * first, const void * second) {
-   int firstInt = * (const int *) first;
-    int secondInt = * (const int *) second;
-    return firstInt - secondInt;
+   return ( *(int*)first - *(int*)second );
     }
 
 #endif

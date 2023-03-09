@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "includes.h": "c",
-        "lst2.C": "cpp"
+        "lst2.C": "cpp",
+        "fcntl.h": "c"
     }
 }
