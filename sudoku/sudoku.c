@@ -8,6 +8,7 @@
 int main(int argc, char **argv){
     char buf[90];
     int i = 0;
+    int j = 0;
     int **board;
 
     int fd = open(argv[1], O_RDONLY);
@@ -23,8 +24,29 @@ int main(int argc, char **argv){
     }
 
     buf[size] = '\0';
-    printf("%s\n", buf);
-    printf("%i\n", size);
+
+    // extrait valeurs & stocker dans le `board`
+    i = 0;
+    while (buf[i] != '\0' && j < 81){
+        if (buf[i] >= '1' && buf[i] <= '9')
+            board[j/9][j%9] = buf[i] - '0';
+            j++;
+        
+        i++;
+    }
+
+    // affiche valeurs de `board`
+    i = 0;
+    while (i < 9){
+        j = 0;
+        while (j < 9){
+            printf("%d ", board[i][j]);
+            j++;
+        }
+        printf("\n");
+        i++;
+    }
+
     close(fd);
 
     // libere mémoire
@@ -35,4 +57,5 @@ int main(int argc, char **argv){
     }
 
     free(board);
+    return 0;
 }
