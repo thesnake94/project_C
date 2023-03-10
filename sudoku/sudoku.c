@@ -12,6 +12,10 @@ int main(int argc, char **argv){
     int **board;
 
     int fd = open(argv[1], O_RDONLY);
+    if (fd == -1) {
+        printf("Erreur : impossible d'ouvrir le fichier %s\n", argv[1]);
+        return 1;
+    }
     int size = read(fd, buf, 90);
 
     // allouer la mémoire du int ** -> 9lignes (9 int *)
