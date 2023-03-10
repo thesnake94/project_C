@@ -1,6 +1,5 @@
 // reunir 2 chaines de caracteres
 
-
 #include <stdlib.h>
 #include <stdio.h>
 

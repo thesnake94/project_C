@@ -18,7 +18,7 @@ char *gd_strdup(const char *src){
     if (ret == NULL)
         return NULL;
 
-
+    //copie chaque caractere
     len_src = 0;
     while(src[len_src]){
         ret[len_src] = src[len_src];
